@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Dashboard - Encuestas
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Encuesta: HotDogs Viana</h1>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <a href="{% url 'crear_encuesta' %}">
+                <img src="{% static 'img/img1.png' %}" class="img-fluid" alt="Gráfico de Pregunta 1">
+            </a>
+            <h3 class="text-h3">Pregunta 1: </h3>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'crear_encuesta' %}">
+                <img src="{% static 'img/img1.png' %}" class="img-fluid" alt="Gráfico de Pregunta 1">
+            </a>
+            <h3 class="text-h3">Pregunta 1: </h3>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'crear_encuesta' %}">
+                <img src="{% static 'img/img1.png' %}" class="img-fluid" alt="Gráfico de Pregunta 1">
+            </a>
+            <h3 class="text-h3">Pregunta 1: </h3>
+        </div>
+    </div>
+</div>
+{% endblock %}

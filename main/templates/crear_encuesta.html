@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Crear Encuesta - HotDogs Viana
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Contestar Encuesta: HotDog Viana</h1>
+    <form method="POST" action="{% url 'crear_encuesta' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="pregunta1">1. ¿Cómo encontró el sabor de su pedido?</label>
+            <select id="pregunta1" class="form-control" name="sabor">
+                <option>Elija una opción</option>
+                <option value="excelente">Excelente</option>
+                <option value="bueno">Bueno</option>
+                <option value="regular">Regular</option>
+                <option value="malo">Malo</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pregunta2">2. ¿Cómo encontró la rapidez del servicio?</label>
+            <select id="pregunta2" class="form-control" name="rapidez">
+                <option>Elija una opción</option>
+                <option value="muy_rapido">Muy rápido</option>
+                <option value="rapido">Rápido</option>
+                <option value="lento">Lento</option>
+                <option value="muy_lento">Muy lento</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pregunta3">3. ¿Cómo encontró la higiene del lugar?</label>
+            <select id="pregunta3" class="form-control" name="higiene">
+                <option>Elija una opción</option>
+                <option value="excelente">Excelente</option>
+                <option value="buena">Buena</option>
+                <option value="regular">Regular</option>
+                <option value="mala">Mala</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pregunta4">4. ¿Cómo calificaría la relación calidad-precio?</label>
+            <select id="pregunta4" class="form-control" name="calidad_precio">
+                <option>Elija una opción</option>
+                <option value="excelente">Excelente</option>
+                <option value="buena">Buena</option>
+                <option value="regular">Regular</option>
+                <option value="mala">Mala</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pregunta5">5. ¿Qué tan probable es que recomiende nuestro restaurante a sus amigos o familiares?</label>
+            <select id="pregunta5" class="form-control" name="recomendacion">
+                <option>Elija una opción</option>
+                <option value="muy_probable">Muy probable</option>
+                <option value="probable">Probable</option>
+                <option value="poco_probable">Poco probable</option>
+                <option value="nada_probable">Nada probable</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pregunta6">6. Por favor, comparta cualquier comentario adicional o sugerencia:</label>
+            <textarea id="pregunta6" class="form-control" name="comentarios" rows="3"></textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success mt-3">Terminar</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

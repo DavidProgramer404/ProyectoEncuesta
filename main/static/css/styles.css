@@ -1,0 +1,23 @@
+/* Mensaje de error */
+.alert-error {
+    color: #58151c;
+    background-color: #f8d7da;
+    border-color: #f1aeb5;
+}
+.img-fluid{
+    max-width: 50% !important;
+    height: auto;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    
+
+
+}
+.text-h3{
+    text-align: center;
+    font-size: 30px;
+    color: #58151c;
+    margin-bottom: 10px;
+}
+
